@@ -3,10 +3,10 @@ import allure
 from prepare.prepareTestData import *
 
 
-@allure.feature('机构管理')
+@allure.feature('添加用户')
 class TestOrgManageClass:
     # 机构管理
-    @allure.story("机构管理")
+    @allure.story("添加用户")
     @allure.title("{case_name}")
     @pytest.mark.parametrize('case_name,api,request_data,response_data', org_test_data)
     def test_org_manage(self, case_name, api, request_data, response_data):

@@ -8,6 +8,13 @@ def connect_mysql(db):
     return conn, cursor
 
 
+def count_user_num():
+    conn, cursor = connect_mysql("pingan_resume")
+    count_user = "select count(1) from wts_user"
+    cursor.execute(count_user)
+    print("用户条数：", cursor.fetchone()[0])
+
+
 # 查询表中所有的信息
 def query_info(table_name):
     conn, cursor = connect_mysql("hami_db_stg")
@@ -408,8 +415,9 @@ class DelDBData:
 """
 
 if __name__ == "__main__":
-    field_list = ("HM0A001", "HM0A002", "HM0A003", "HM0A004")
-    print(query_id_from_table("hm_org", "org_code", field_list))
+    count_user_num()
+    # field_list = ("HM0A001", "HM0A002", "HM0A003", "HM0A004")
+    # print(query_id_from_table("hm_org", "org_code", field_list))
     # query_org_code = ("GSB001", "GSB002", "GSB003", "GSB004", "GSB005", "GSB006", "GSB007", "GSB008", "GSB009")
     # queryResult = query_id_from_table("hm_org", "org_code", query_org_code)
     # print(queryResult)
