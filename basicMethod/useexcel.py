@@ -31,5 +31,12 @@ def get_excel_data(file_path, sheet_name):
 
 if __name__ == "__main__":
     # print(get_excel_data(defaultTestDataFile, default_org_data_sheet_name))
-    data = get_excel_data(defaultTestDataFile, default_org_data_sheet_name)
+    # data = get_excel_data(test_data_file, inquire_user_sheet_name)
+    # print(data[0])
+    # case_name = data[0]['case_name']
+    # request_api = data[0]['api']
+    # request_data = data[0]['requestData']
+    # response_data = data[0]['responsData']
+    # print(case_name, request_api, request_data, response_data)
+    data = get_test_data(test_data_file, inquire_user_sheet_name)
     print(data)

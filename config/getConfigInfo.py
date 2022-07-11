@@ -14,7 +14,7 @@ server_host = conf.get("serverInfo", "host")
 
 # 读取测试数据
 # defaultTestDataFile = conf.get("testData", "defaultDataFilePath")
-# testDataFile = conf.get("testData", "testDataFilePath")
+test_data_file = conf.get("testData", "test_data_file_path")
 # print(defaultTestDataFile)
 # print(testDataFile)
 
@@ -34,7 +34,7 @@ add_position_url = conf.get("url", "add_position_url")
 add_user_url = conf.get("url", "add_user_url")
 
 # 读取sheet信息
-default_org_data_sheet_name = conf.get("defaultDataSheetName", "org_data_sheet_name")
+inquire_user_sheet_name = conf.get("defaultDataSheetName", "inquire_user_sheet_name")
 default_role_data_sheet_name = conf.get("defaultDataSheetName", "role_sheet_name")
 default_position_data_sheet_name = conf.get("defaultDataSheetName", "position_sheet_name")
 default_user_data_sheet_name = conf.get("defaultDataSheetName", "user_sheet_name")
